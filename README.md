@@ -13,7 +13,7 @@ Participants deposit funds into a contract and lock them for certain amount of t
 ## Phase 1
 
 Lasts for time period T1.
-Order commitments are submitted. The commitment reveals the amount but not the price of the order. The amount of all orders submitted by any participant needs to be <= amount of funds locked in Phase 0.
+Order commitments are submitted. The commitment reveals the amount but not the price of the order. The amount of all orders submitted by any participant needs to be <= amount of funds locked by them in Phase 0.
 
 ## Phase 2
 
