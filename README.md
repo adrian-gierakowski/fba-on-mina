@@ -4,7 +4,7 @@ Prototype of a DEX using Frequent Batch Auction mechanism for settling trades. I
 
 # Design
 
-In FBAs trades are processed in batches, with settlement occurring at the end of each discrete time period (form more details see [here](https://academic.oup.com/qje/article/130/4/1547/1916146#173478425), therefore our design will be divided into phases.
+In FBAs trades are processed in batches, with settlement occurring at the end of each discrete time period (form more details see [here](https://academic.oup.com/qje/article/130/4/1547/1916146#173478425)), therefore our design will be divided into phases.
 
 ## Phase 0
 
