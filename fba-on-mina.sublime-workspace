@@ -1,0 +1,2053 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wra",
+				"wrapperName"
+			],
+			[
+				"exp",
+				"export"
+			],
+			[
+				"nu",
+				"number"
+			],
+			[
+				"n",
+				"number"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"fla",
+				"flatMap"
+			],
+			[
+				"flat",
+				"flatMap"
+			],
+			[
+				"Str",
+				"Stream"
+			],
+			[
+				"omit",
+				"omitBy"
+			],
+			[
+				"omi",
+				"omitAll"
+			],
+			[
+				"map",
+				"map"
+			],
+			[
+				"keyB",
+				"keyBy"
+			],
+			[
+				"fl",
+				"flatMap"
+			],
+			[
+				"some",
+				"someUsers"
+			],
+			[
+				"take",
+				"take"
+			],
+			[
+				"and",
+				"andThen"
+			],
+			[
+				"th",
+				"thru"
+			],
+			[
+				"imp",
+				"import"
+			],
+			[
+				"fi",
+				"filter"
+			],
+			[
+				"use",
+				"userId"
+			],
+			[
+				"us",
+				"usersById"
+			],
+			[
+				"fil",
+				"filter"
+			],
+			[
+				"writeFi",
+				"writeFileSync"
+			],
+			[
+				"useWit",
+				"usersWithLikes"
+			],
+			[
+				"type",
+				"typescriptEslint"
+			],
+			[
+				"pick",
+				"pickInteger"
+			],
+			[
+				"boo",
+				"boolean"
+			],
+			[
+				"keyBy",
+				"keyBy"
+			],
+			[
+				"getPU",
+				"getPublicTokenMap"
+			],
+			[
+				"listeD",
+				"listedPrices"
+			],
+			[
+				"mockREtu",
+				"mockReturnValue"
+			],
+			[
+				"mockRE",
+				"mockResolvedValue"
+			],
+			[
+				"find",
+				"findAllWithCoingeckoId"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"Token",
+				"TokenPrice"
+			],
+			[
+				"mockRetu",
+				"mockReturnValue"
+			],
+			[
+				"no",
+				"notFound"
+			],
+			[
+				"mockRes",
+				"mockResolvedValue"
+			],
+			[
+				"mockReturn",
+				"mockReturnValue"
+			],
+			[
+				"tokenis",
+				"tokenIsRequested"
+			],
+			[
+				"ide",
+				"identity"
+			],
+			[
+				"identi",
+				"identical"
+			],
+			[
+				"test",
+				"test"
+			],
+			[
+				"de",
+				"destroy"
+			],
+			[
+				"Timescale",
+				"TimescaleDbClient"
+			],
+			[
+				"RediCLi",
+				"RedisClientWrapper"
+			],
+			[
+				"LOgge",
+				"LoggerFactory"
+			],
+			[
+				"fet",
+				"featchSyncStartDatesForSymbols"
+			],
+			[
+				"Mar",
+				"MarketSymbol"
+			],
+			[
+				"TIm",
+				"TimescaleDBTradeRepository"
+			],
+			[
+				"fin",
+				"findLatestBySymbols"
+			],
+			[
+				"Collect",
+				"Collection"
+			],
+			[
+				"maxBa",
+				"maxBatchSize"
+			],
+			[
+				"con",
+				"connectWithEnv"
+			],
+			[
+				"splitAt",
+				"splitAt"
+			],
+			[
+				"dbv",
+				"dvfSymbolToBfx"
+			],
+			[
+				"proces",
+				"processEnv"
+			],
+			[
+				"parseENv",
+				"parseEnvVarJson"
+			],
+			[
+				"trade",
+				"bfxtTradeSynchronizer"
+			],
+			[
+				"bfx",
+				"bfxWS2ManagerWrapper"
+			],
+			[
+				"stringTo",
+				"stringToNumber"
+			],
+			[
+				"Bfx",
+				"BfxTradeData"
+			],
+			[
+				"reverse",
+				"reverse"
+			],
+			[
+				"Retr",
+				"ReturnType"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"time",
+				"timeout"
+			],
+			[
+				"des",
+				"destroyed"
+			],
+			[
+				"cle",
+				"clearTimeout"
+			],
+			[
+				"ex",
+				"expect"
+			],
+			[
+				"inte",
+				"internal"
+			],
+			[
+				"tU",
+				"tETHUST"
+			],
+			[
+				"BfxDa",
+				"BfxTradeDataRow"
+			],
+			[
+				"BfxTr",
+				"BfxTradeDataRow"
+			],
+			[
+				"last",
+				"last"
+			],
+			[
+				"Arra",
+				"ArrayElement"
+			],
+			[
+				"resu",
+				"resultP"
+			],
+			[
+				"GetT",
+				"GetTradeHistoryForSymbol"
+			],
+			[
+				"logg",
+				"Logger"
+			],
+			[
+				"ZodTy",
+				"ZodTypeAny"
+			],
+			[
+				"Zod",
+				"ZodAny"
+			],
+			[
+				"get",
+				"getParsed"
+			],
+			[
+				"clien",
+				"clientOptions"
+			],
+			[
+				"typ",
+				"Types"
+			],
+			[
+				"if",
+				"infer"
+			],
+			[
+				"u",
+				"union"
+			],
+			[
+				"pr",
+				"ProcessEnv"
+			],
+			[
+				"pi",
+				"pipe"
+			],
+			[
+				"proc",
+				"processEnv"
+			],
+			[
+				"proce",
+				"processEnv"
+			],
+			[
+				"stringToN",
+				"stringToNumber"
+			],
+			[
+				"string",
+				"stringToBoolean"
+			],
+			[
+				"bool",
+				"boolean"
+			],
+			[
+				"un",
+				"unknown"
+			],
+			[
+				"str",
+				"struct"
+			],
+			[
+				"chain",
+				"chain"
+			],
+			[
+				"e",
+				"every"
+			],
+			[
+				"form",
+				"formatValidationErrors"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"mis",
+				"missingToken"
+			],
+			[
+				"tokenL",
+				"TokenList"
+			],
+			[
+				"prce",
+				"processEnv"
+			],
+			[
+				"Logger",
+				"LoggerFactory"
+			],
+			[
+				"process",
+				"processRoutedOrderdBookStreams"
+			],
+			[
+				"reducer",
+				"orderBookStreamReducer"
+			],
+			[
+				"zod",
+				"src/common/zod/envHepers.ts"
+			],
+			[
+				"dvf",
+				"DvfLogger"
+			],
+			[
+				"redis",
+				"redisMessagePublisher"
+			],
+			[
+				"Ord",
+				"OrderBook"
+			],
+			[
+				"thrott",
+				"snapshotSaveThrottleMs"
+			],
+			[
+				"redi",
+				"redisClientWrapper"
+			],
+			[
+				"Redi",
+				"RedisMessagePublisher"
+			],
+			[
+				"thr",
+				"throttleMs"
+			],
+			[
+				"defa",
+				"defaultExport"
+			],
+			[
+				"thro",
+				"throttle"
+			],
+			[
+				"Or",
+				"OrderBook"
+			],
+			[
+				"mregeWith",
+				"mergeInternalStreamWithExternalStreamFactory"
+			],
+			[
+				"is",
+				"isInternal"
+			],
+			[
+				"O",
+				"OrderBookUpdated"
+			],
+			[
+				"tes",
+				"testDataInternal"
+			],
+			[
+				"Payloa",
+				"LocalOrderBookPayload"
+			],
+			[
+				"rout",
+				"routingStream"
+			],
+			[
+				"def",
+				"defaultExport"
+			],
+			[
+				"tog",
+				"toggledStreamContents"
+			],
+			[
+				"Array",
+				"ArrayElement"
+			],
+			[
+				"boole",
+				"boolean"
+			],
+			[
+				"gat",
+				"gateStream"
+			],
+			[
+				"isSt",
+				"isString"
+			],
+			[
+				"togg",
+				"togglingStream1"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"insert",
+					{
+						"characters": "`"
+					},
+					"AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAYA",
+					"AQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/FrequentBatchAuction.test.ts",
+			"settings":
+			{
+				"buffer_size": 2465,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"file": "jest.config.js",
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fmt sett",
+				"Preferences: Fmt Settings"
+			],
+			[
+				"fmt",
+				"Fmt: Format Buffer"
+			],
+			[
+				"fmt stet",
+				"Preferences: Fmt Settings"
+			],
+			[
+				"fmt st",
+				"Fmt: Format Selection"
+			],
+			[
+				"fmt settin",
+				"Preferences: Fmt Settings"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"copy",
+				"File: Copy Name"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"copy p",
+				"File: Copy Path"
+			],
+			[
+				"ren",
+				"Rename File"
+			],
+			[
+				"copy ",
+				"File: Copy Name"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"copy re",
+				"File: Copy Relative Path To Project"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"org",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"imp",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"copy n",
+				"File: Copy Name"
+			],
+			[
+				"lint thi",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lsp ",
+				"LSP: Toggle Log Panel"
+			],
+			[
+				"mov",
+				"File: Move"
+			],
+			[
+				"copyn",
+				"File: Copy Name"
+			],
+			[
+				"syntax bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"keyb",
+				"Preferences: LSP Key Bindings"
+			],
+			[
+				"lst pyte",
+				"Preferences: LSP-typescript Settings"
+			],
+			[
+				"setting lsp typ",
+				"Preferences: LSP-typescript Settings"
+			],
+			[
+				"lsp lo",
+				"LSP: Toggle Log Panel"
+			],
+			[
+				"lsp log",
+				"LSP: Toggle Log Panel"
+			],
+			[
+				"lsp pyte",
+				"Preferences: LSP-typescript Settings"
+			],
+			[
+				"sub lin setting",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"lsg log",
+				"LSP: Toggle Log Panel"
+			],
+			[
+				"lsp diag",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"dagn",
+				"LSP: Goto Diagnostic"
+			],
+			[
+				"lsp setti",
+				"Preferences: LSP Settings"
+			],
+			[
+				"lsp sett",
+				"Preferences: LSP Settings"
+			],
+			[
+				"save a",
+				"File: Save All"
+			],
+			[
+				"impo",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"impor",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"save ",
+				"File: Save All"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"coyp",
+				"File: Copy Name"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"fimt",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"lint this",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lints this",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint",
+				"SublimeLinter: Toggle Highlights"
+			],
+			[
+				"lsp ren",
+				"LSP: Rename"
+			],
+			[
+				"re",
+				"Rename File"
+			],
+			[
+				"lsp rename",
+				"LSP: Rename"
+			],
+			[
+				"subli linter setting",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"cop",
+				"File: Copy Name"
+			],
+			[
+				"copy r",
+				"File: Copy Relative Path To Project"
+			],
+			[
+				"sav",
+				"File: Save All"
+			],
+			[
+				"set sy jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"copyre",
+				"File: Copy Relative Path To Project"
+			],
+			[
+				"jso v",
+				"Pretty JSON: Validate"
+			],
+			[
+				"copyr e",
+				"File: Copy Relative Path To Project"
+			],
+			[
+				"jso",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"d",
+				"File: Delete"
+			],
+			[
+				"reverse",
+				"Permute Lines: Reverse"
+			],
+			[
+				"rever",
+				"File: Revert"
+			],
+			[
+				"lsp",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"copy rep",
+				"File: Copy Relative Path To Project"
+			],
+			[
+				"or",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"setting lsp",
+				"Preferences: LSP Settings"
+			],
+			[
+				"lint this view",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint this ",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"syntax java",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"synt babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"setting lint",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"lint th",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"this vie",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"import",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"lintthis",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint ",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lin",
+				"SublimeLinter: Toggle Highlights"
+			],
+			[
+				"orgni",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"organ",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"org ",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"lsp got",
+				"LSP: Goto Implementation"
+			],
+			[
+				"Lsp",
+				"LSP: Goto Diagnostic"
+			],
+			[
+				"delee",
+				"File: Delete"
+			],
+			[
+				"syn ty",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"smt",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"cogy",
+				"File: Copy as Tag a"
+			],
+			[
+				"fm",
+				"Fmt: Format Buffer"
+			],
+			[
+				"copgy",
+				"File: Copy as Tag a"
+			],
+			[
+				"ftm",
+				"Fmt: Format Buffer"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"synt type",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"json sort",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"json sor",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"sor",
+				"Sort Lines"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"org i",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"lsp definition ",
+				"LSP-typescript: Goto Source Definition"
+			],
+			[
+				"lsp go",
+				"LSP: Goto Symbol"
+			],
+			[
+				"iimpor",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"orga",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"COPY",
+				"File: Copy Name"
+			],
+			[
+				"lsp imp",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"lsp or",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"form",
+				"Fmt: Format Buffer"
+			],
+			[
+				"lsp-type",
+				"LSP-typescript: Organize Imports"
+			],
+			[
+				"lsp-typ",
+				"Preferences: LSP-typescript Settings"
+			],
+			[
+				"remov p",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pacakg inst",
+				"Package Control: Install Package"
+			],
+			[
+				"lit",
+				"SublimeLinter: Toggle Highlights"
+			],
+			[
+				"packag con up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"sot",
+				"Post Selection or Entire File to 0x0"
+			],
+			[
+				"cach",
+				"FuzzyFilePath: Rebuild cache"
+			],
+			[
+				"coy",
+				"File: Copy Name"
+			],
+			[
+				"jsonfor",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"jsonf",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"json for",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"copy rel",
+				"File: Copy Relative Path To Project"
+			],
+			[
+				"save al",
+				"File: Save All"
+			],
+			[
+				"delet",
+				"File: Delete"
+			],
+			[
+				"cpo",
+				"File: Copy Name"
+			],
+			[
+				"copye",
+				"File: Copy Name Encoded"
+			],
+			[
+				"jston f",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"cop y",
+				"File: Copy Name"
+			],
+			[
+				"synt json",
+				"Set Syntax: JSON"
+			],
+			[
+				"opyn",
+				"File: Copy Name"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 492.0,
+		"history":
+		[
+			"eslint"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/adrian/code/mina/fba-on-mina/fba-on-mina"
+	],
+	"file_history":
+	[
+		"/home/adrian/code/mina/fba-on-mina/.envrc",
+		"/home/adrian/deversifi/launch-deversifi/.gitignore",
+		"/home/adrian/deversifi/launch-deversifi/terraform/projects/deversifi/_base/aiven.tf",
+		"/home/adrian/deversifi/launch-deversifi/nix/utils.nix",
+		"/home/adrian/deversifi/launch-deversifi/nix/scripts/sops-wrapped-with-config.nix",
+		"/home/adrian/deversifi/launch-deversifi/terraform/projects/deversifi/dev/...",
+		"/home/adrian/deversifi/launch-deversifi/terraform/projects/deversifi/mkSell.nix",
+		"/home/adrian/deversifi/launch-deversifi/terraform/projects/deversifi/dev/versions.tf",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/src/getPropFromUnknownType.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/src/fetchCurrentClusterTime.ts",
+		"/home/adrian/deversifi/tsserver-log-wNYHPu/tsserver.log",
+		"/home/adrian/deversifi/tsserver-log-wNYHPu/.eslintrc.js",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/package.json",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/.yarnrc.yml",
+		"/home/adrian/deversifi/launch-deversifi/shared/eslint-preset-ts/src/index.js",
+		"/home/adrian/deversifi/launch-deversifi-2/shared/streaming-workshop/src/01.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/linter-test/.yarnrc.yml",
+		"/home/adrian/deversifi/launch-deversifi-2/shared/streaming-workshop/.i",
+		"/home/adrian/deversifi/tsserver-log-9T07Dg/tsserver.log",
+		"/home/adrian/deversifi/launch-deversifi/shared/linter-test/src/fetchCurrentClusterTime.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/linter-test/package.json",
+		"/home/adrian/deversifi/tsserver-log-P4vjqY/tsserver.log",
+		"/home/adrian/deversifi/launch-deversifi/shared/linter-test/.yarn/unplugged/typescript-eslint-language-service-virtual-cfc556336f/node_modules/typescr",
+		"/home/adrian/deversifi/launch-deversifi/shared/linter-test/.yarn/unplugged/typescript-eslint-language-service-virtual-cfc556336f/node_modules/typesc",
+		"/home/adrian/deversifi/launch-deversifi/shared/linter-test/.yarn/unplugged/typescript-eslint-language-service-virtual-cfc556336f/node_modules/typescript-eslint-language-service/lib/ast-converter.js",
+		"/home/adrian/deversifi/tsserver-log-T5ZPAP/tsserver.log",
+		"/home/adrian/deversifi/tsserver-log-U20cmX/tsserver.log",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/tsconfig.json",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/package.json",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/00.ts",
+		"/home/adrian/deversifi/tsserver-log-oXNnZx/tsserver.log",
+		"/home/adrian/deversifi/tsserver-log-5Y1NbO/tsserver.log",
+		"/home/adrian/deversifi/launch-deversifi-2/shared/streaming-workshop/src/05-solution.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/users.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/04-solution.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/04_1.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/05-solution.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/03.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/01-solution.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/02-solution.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/02.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/01.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/05.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/04.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/jest.config.js",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/strimify.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/04.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/03.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/05.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/03-solution.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/streaming-workshop/src/06.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/common/utils/functionRateLimiterFactory.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/jest.config.js",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/airbnb.js",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/src/test1.js",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/eslint.config.js",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/src/test1.mjs",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/.pnp.cjs",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/src/test1.ts",
+		"/home/adrian/.config/sublime-text/Packages/LSP/Default.sublime-keymap",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/TradeHistorySynchronizer.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/CandleUpdater.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/domain/Candle.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-stark-trading/src/lib/dvf/submitOrderHandler.js",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/k8s/base/workers/realtime-candle-streams/deployment.yaml",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/common/config.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/tsserver-log-2ybPB9/tsserver.log",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/tsserver-log-VF5YvL/tsserver.log",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/tsserver-log-or08bM/tsserver.log",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/tsserver-log-vctnKL/tsserver.log",
+		"/home/adrian/code/typescript-eslint-language-service/package.json",
+		"/home/adrian/code/typescript-eslint-language-service/src/ast-converter.ts",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/tsconfig.json",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/tsserver-log-AWJmE0/tsserver.log",
+		"/home/adrian/deversifi/launch-deversifi/shared/mongo-utils/tsserver-log-nQafK4/tsserver.log",
+		"/home/adrian/.config/sublime-text/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/adrian/.config/sublime-text/Packages/User/SublimeLinter.sublime-settings",
+		"/home/adrian/.config/sublime-text/Packages/User/LSP.sublime-settings",
+		"/home/adrian/.config/sublime-text/Packages/LSP/LSP.sublime-settings",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/k8s/base/workers/bfx-trade-synchronizer/deployment.yaml",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/k8s/kustomization.yaml.tmpl",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/routedOrderdBookProcessor.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/domain/orderBookStreamReducer.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/common/zod/envHepers.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/PriceFetcher.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/PriceFetcher.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/index.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/deployments/market-data/index.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/k8s/base/config/_defaults/DEFAULT_LP_TOKEN_PRICE",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/PriceService.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/common/highland/gateStream.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/PriceFetcherJob.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/PriceFetcherJob.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/PriceService.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/config/local/DEFAULT_LP_TOKEN_PRICE",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/k8s/redis/default.nix",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/k8s/redis/redis.yaml",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/infrastructure/providers/me/METradeEventProvider.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/infrastructure/repositories/timescaledb/TimescaleDBCandleRepository.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/types/highland/index.d.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/infrastructure/repositories/timescaledb/TimescaleDBTokenPriceRepository.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/infrastructure/providers/coingecko/CoingeckoPriceFeed.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/types/highland/LICENSE",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/types/highland/package.json",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/types/highland/README.md",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/tsconfig.json",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/infrastructure/providers/coingecko/CoingeckoPriceFeed.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/common/interfaces/Job.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/ports/TokenPriceRepositoryPort.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/glb",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/common/utils/memoizeWithTimeout.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/domain/InMemoryCache.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/common/errors/ErrorMessages.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/infrastructure/providers/me/CrossChainTokensProvider.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/test.test.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/.yarn/unplugged/jest-mock-extended-virtual-78375ad5bb/node_modules/jest-mock-extended/lib/index.d.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/common/errors/index.ts",
+		"/zip",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/presentation/rest/controllers/v2/usdPrices.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/log",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data/src/wsServer/routes/getUsdPrices.js",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data/src/lib/getUsdPriceForToken.js",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data/src/lib/getUsdPriceForToken.test.js",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/domain/values/MarketSymbol.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/market-data/app/SwapPathsService.ts",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/config/local/STABLECOIN_SYMBOLS",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/k8s/base/config/dev/STABLECOIN_SYMBOLS",
+		"/home/adrian/deversifi/launch-deversifi/dvf-market-data-v2/src/presentation/rest/controllers/v1/index.ts"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 178.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"lsp_uri": "buffer://sublime/48",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/FrequentBatchAuction.test.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1644,
+								1644
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".\"'/@<",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "LSP-typescript"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///home/adrian/code/mina/fba-on-mina/fba-on-mina/src/FrequentBatchAuction.test.ts",
+							"show_definitions": false,
+							"syntax": "Packages/JavaScript/TypeScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "jest.config.js",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".\"'/@<",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "LSP-typescript"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///home/adrian/code/mina/fba-on-mina/fba-on-mina/jest.config.js",
+							"show_definitions": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 59.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Fmt":
+	{
+		"height": 221.0
+	},
+	"output.LSP Log Panel":
+	{
+		"height": 569.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 430.0
+	},
+	"output.diagnostics":
+	{
+		"height": 389.0
+	},
+	"output.exec":
+	{
+		"height": 142.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.references":
+	{
+		"height": 440.0
+	},
+	"pinned_build_system": "",
+	"project": "fba-on-mina.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"test",
+				"src/FrequentBatchAuction.test.ts"
+			],
+			[
+				"fe",
+				"src/fetchCurrentClusterTime.ts"
+			],
+			[
+				"fet",
+				"src/fetchCurrentClusterTime.ts"
+			],
+			[
+				"usr",
+				"src/users.ts"
+			],
+			[
+				"jest",
+				"jest.config.js"
+			],
+			[
+				"test.ts",
+				"src/01.test.ts"
+			],
+			[
+				"ratelimi",
+				"src/common/utils/functionRateLimiterFactory.ts"
+			],
+			[
+				"00",
+				"src/00.ts"
+			],
+			[
+				"nix/.sh",
+				"nix/scripts/json2ini.sh"
+			],
+			[
+				"test.",
+				"test.ts"
+			],
+			[
+				"index",
+				"src/market-data/index.ts"
+			],
+			[
+				"trade synchron",
+				"src/market-data/app/bfxtTradeSynchronizer.ts"
+			],
+			[
+				"candle/",
+				"k8s/base/workers/realtime-candle-streams/deployment.yaml"
+			],
+			[
+				"BFX_TRADE_SYNC_SYMBOL_CONFIG",
+				"k8s/base/config/dev/BFX_TRADE_SYNC_SYMBOL_CONFIG"
+			],
+			[
+				"BFX_TRAD",
+				"config/local/BFX_TRADE_SYNC_SYMBOL_CONFIG"
+			],
+			[
+				"f",
+				"src/fetchCurrentClusterTime.ts"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"tsc",
+				"tsconfig.json"
+			],
+			[
+				"sql",
+				"src/sql.ts"
+			],
+			[
+				"pa",
+				"package.json"
+			],
+			[
+				"splitA",
+				"src/common/highland/splitAt.ts"
+			],
+			[
+				"trade sync/de",
+				"k8s/base/workers/bfx-trade-synchronizer/deployment.yaml"
+			],
+			[
+				"route",
+				"src/market-data/app/routedOrderdBookProcessor.ts"
+			],
+			[
+				"DEFAULT_LP_TOKEN_PRICE",
+				"k8s/base/config/_defaults/DEFAULT_LP_TOKEN_PRICE"
+			],
+			[
+				"PriceFe",
+				"src/market-data/app/PriceFetcher.ts"
+			],
+			[
+				"PriceF",
+				"src/market-data/app/PriceFetcher.ts"
+			],
+			[
+				"priceF",
+				"src/market-data/app/PriceFetcher.ts"
+			],
+			[
+				"DEFU",
+				"config/local/DEFAULT_LP_TOKEN_PRICE"
+			],
+			[
+				"routedOr",
+				"src/market-data/app/routedOrderdBookProcessor.ts"
+			],
+			[
+				"highla/",
+				"src/types/highland/LICENSE"
+			],
+			[
+				"tsco",
+				"tsconfig.json"
+			],
+			[
+				"tokenPriceRepository",
+				"src/market-data/app/ports/TokenPriceRepositoryPort.ts"
+			],
+			[
+				"memoizeWithTimeout.ts",
+				"src/common/utils/memoizeWithTimeout.ts"
+			],
+			[
+				"memoizeWithTI",
+				"src/common/utils/memoizeWithTimeout.ts"
+			],
+			[
+				"cache",
+				"src/market-data/domain/InMemoryCache.ts"
+			],
+			[
+				"PriceSer.ts",
+				"src/market-data/app/PriceService.test.ts"
+			],
+			[
+				"test.t",
+				"src/test.test.ts"
+			],
+			[
+				"PriceService",
+				"src/market-data/app/PriceService.ts"
+			],
+			[
+				"Errors",
+				"src/common/errors/index.ts"
+			],
+			[
+				"TokenPriceRepositoryPort",
+				"src/market-data/app/ports/TokenPriceRepositoryPort.ts"
+			],
+			[
+				"PriceFetcher",
+				"src/market-data/app/PriceFetcher.ts"
+			],
+			[
+				"PriceSE",
+				"src/market-data/app/PriceService.ts"
+			],
+			[
+				"con",
+				"src/common/config.ts"
+			],
+			[
+				"domain/values/MarketSymbol",
+				"src/market-data/domain/values/MarketSymbol.ts"
+			],
+			[
+				"MarketSymbol",
+				"src/market-data/domain/values/MarketSymbol.ts"
+			],
+			[
+				"STABLECOIN_SYMBOLS",
+				"k8s/base/config/dev/STABLECOIN_SYMBOLS"
+			],
+			[
+				"STABLE",
+				"config/local/STABLECOIN_SYMBOLS"
+			],
+			[
+				"stringToarr",
+				"src/common/zod/schemas/stringToArrayOfStrings.ts"
+			],
+			[
+				"get",
+				"src/common/utils/getPropFromUnknownType.ts"
+			],
+			[
+				".ts",
+				"src/test.ts"
+			],
+			[
+				".pn",
+				".pnp.cjs"
+			],
+			[
+				"nix/eslint",
+				"nix/scripts/eslint-with-config-ts/.eslintrc.js"
+			],
+			[
+				"nix eslintrc",
+				"nix/scripts/eslint-default-eslintrc-ts.js"
+			],
+			[
+				"nix/.est",
+				"nix/scripts/eslint-with-config-ts/.eslintrc.js"
+			],
+			[
+				"nix/.eslintrc.js",
+				"nix/scripts/eslint-with-config/.eslintrc.js"
+			],
+			[
+				"nix/scripts/eslint",
+				"nix/scripts/eslint-with-config/.eslintrc.js"
+			],
+			[
+				"ts",
+				"tsconfig.json"
+			],
+			[
+				"tradeFromSe",
+				"src/market-data/infrastructure/providers/me/tradesFromSettlementsStreamFactory.ts"
+			],
+			[
+				"MeTRad",
+				"src/market-data/infrastructure/providers/me/METradeEventProvider.ts"
+			],
+			[
+				"MeTrade",
+				"src/market-data/infrastructure/providers/me/METradeEventProvider.ts"
+			],
+			[
+				"bfx tradeHIsto",
+				"src/market-data/infrastructure/providers/bfx/tradeHistoryStreamFactory.ts"
+			],
+			[
+				"bfxRes",
+				"src/market-data/infrastructure/providers/bfx/bfxRestApiClientFactory.ts"
+			],
+			[
+				"TimescaleDBTradeRepository",
+				"src/market-data/infrastructure/repositories/timescaledb/TimescaleDBTradeRepository.ts"
+			],
+			[
+				"local/sync",
+				"config/local/BFX_TRADE_SYNC_SYMBOL_CONFIG"
+			],
+			[
+				"ratelimit",
+				"src/common/utils/functionRateLimiterFactory.ts"
+			],
+			[
+				"MarketSYm",
+				"src/market-data/domain/values/MarketSymbol.ts"
+			],
+			[
+				"TradeSink",
+				"src/market-data/app/TradesSink.ts"
+			],
+			[
+				"tradeHistoryStreamFactory.ts",
+				"src/market-data/infrastructure/providers/me/tradeHistoryStreamFactory.ts"
+			],
+			[
+				"bfxTradeSyn",
+				"src/market-data/app/bfxtTradeSynchronizer.ts"
+			],
+			[
+				"tradeHIstoStream",
+				"src/market-data/infrastructure/providers/bfx/tradeHistoryStreamFactory.ts"
+			],
+			[
+				"METradeEventProvider",
+				"src/market-data/infrastructure/providers/me/METradeEventProvider.ts"
+			],
+			[
+				"ME_",
+				"config/local/ME_TRADES_SINK_SYMBOLS"
+			],
+			[
+				"src/types/node/index.d.ts",
+				"src/types/node/index.d.ts"
+			],
+			[
+				"conf",
+				"src/common/config.ts"
+			],
+			[
+				"confi",
+				"src/common/config.ts"
+			],
+			[
+				"modif",
+				"src/common/optics/modifyProp.ts"
+			],
+			[
+				"BFX_TRADE_SYNC_HISTORY_FETCH_PAGE_SIZE",
+				"config/local/BFX_TRADE_SYNC_HISTORY_FETCH_PAGE_SIZE"
+			],
+			[
+				"SwapPathsDomainService",
+				"src/market-data/domain/SwapPathsDomainService.ts"
+			],
+			[
+				"SwapPathsService",
+				"src/market-data/app/SwapPathsService.ts"
+			],
+			[
+				"config/MARKETS",
+				"config/local/MARKETS"
+			],
+			[
+				"redisConnect",
+				"src/market-data/infrastructure/providers/bfx/BfxConnectionManager.ts"
+			],
+			[
+				"publish",
+				"src/market-data/app/publishOrderBookEventStream.ts"
+			],
+			[
+				"RedisMessagePublisher",
+				"src/market-data/infrastructure/pubsub/redis/RedisMessagePublisher.ts"
+			],
+			[
+				"SYNCH",
+				"config/local/BFX_TRADE_HISTORY_SYNCHRONIZER_BATCH_SIZE"
+			],
+			[
+				"impo",
+				"src/common/interfaces/AmmPool.ts"
+			],
+			[
+				"time/client",
+				"src/common/infrastructure/timescaledb/client.ts"
+			],
+			[
+				"splitAt",
+				"src/common/highland/splitAt.ts"
+			],
+			[
+				"t",
+				"tsconfig.json"
+			],
+			[
+				"bfxtTradeSynchronizer",
+				"src/market-data/app/bfxtTradeSynchronizer.ts"
+			],
+			[
+				"combin",
+				"src/market-data/infrastructure/providers/bfx/combineTradeSubscriptionStreamWithHistory.ts"
+			],
+			[
+				"BFX_SYMBOL_MAPPINGS",
+				"config/local/BFX_SYMBOL_MAPPINGS"
+			],
+			[
+				"schemaFromJSONString",
+				"src/common/zod/schemaFromJSONString.ts"
+			],
+			[
+				"schemaFromJSONStrin",
+				"src/common/zod/schemaFromJSONString.ts"
+			],
+			[
+				"dateS",
+				"src/common/zod/schemas/ISODateStringToDate.ts"
+			],
+			[
+				"stringTo",
+				"src/common/zod/schemas/stringToNumber.ts"
+			],
+			[
+				"BFX_MAP",
+				"config/local/BFX_SYMBOL_MAPPINGS"
+			],
+			[
+				"BFX_TRADE_HISTORY_SYNCHRONIZER_SYMBOLS",
+				"config/local/BFX_TRADE_HISTORY_SYNCHRONIZER_SYMBOLS"
+			],
+			[
+				"market-data/domain/Candle",
+				"src/market-data/domain/Candle.ts"
+			],
+			[
+				"CandleUpdater",
+				"src/market-data/app/CandleUpdater.ts"
+			],
+			[
+				"TradesSink",
+				"src/market-data/app/TradesSink.ts"
+			],
+			[
+				"BFX_TRADE_HISTORY_SYNCHRONIZER_",
+				"config/local/BFX_TRADE_HISTORY_SYNCHRONIZER_BATCH_SIZE"
+			],
+			[
+				"tradeSyncStr",
+				"src/market-data/infrastructure/providers/bfx/tradeSyncStreamFactory.ts"
+			],
+			[
+				"tradeHistoryStreamFactory",
+				"src/market-data/infrastructure/providers/bfx/tradeHistoryStreamFactory.ts"
+			],
+			[
+				"tradeSubscriptionStreamFactory",
+				"src/market-data/infrastructure/providers/bfx/tradeSubscriptionStreamFactory.ts"
+			],
+			[
+				"rateLimitter",
+				"src/common/utils/functionRateLimiterFactory.ts"
+			],
+			[
+				"tradeSync",
+				"src/market-data/app/bfxtTradeSynchronizer.ts"
+			],
+			[
+				"BFXRest",
+				"src/market-data/infrastructure/providers/bfx/bfxRestApiClientFactory.ts"
+			],
+			[
+				"BFX_TRAD__SYMBOLS",
+				"k8s/base/config/_defaults/BFX_TRADE_HISTORY_SYNCHRONIZER_SYMBOLS"
+			],
+			[
+				"zod env ",
+				"src/common/zod/envHepers.ts"
+			],
+			[
+				"BFX_TRADE_SY",
+				"k8s/base/config/dev/BFX_TRADE_HISTORY_SYNCHRONIZER_SYMBOLS"
+			],
+			[
+				"TRADE_SYNC",
+				"k8s/base/config/_defaults/BFX_TRADE_HISTORY_SYNCHRONIZER_SINCE"
+			],
+			[
+				"sync",
+				"src/market-data/infrastructure/providers/bfx/tradeSync.test.ts"
+			],
+			[
+				"app/routedOrderdBookProcessor",
+				"src/market-data/app/routedOrderdBookProcessor.ts"
+			],
+			[
+				"tradeSyn",
+				"src/market-data/infrastructure/providers/bfx/tradeSync.test.ts"
+			],
+			[
+				"syncT",
+				"dist/src/market-data/infrastructure/providers/bfx/tradeSync.test.js"
+			],
+			[
+				"_.",
+				"src/market-data/app/routedOrderdBookProcessor._test_.ts"
+			],
+			[
+				"SyncT",
+				"dist/src/market-data/app/syncTrades_.d.ts"
+			],
+			[
+				".js",
+				"dist/src/market-data/app/routedOrderdBookProcessor._test_.js.map"
+			],
+			[
+				"_.js",
+				"dist/src/market-data/app/syncTrades_.js.map"
+			],
+			[
+				"trade",
+				"src/market-data/app/TradeHistorySynchronizer.ts"
+			],
+			[
+				"functionRateLimiterFactory",
+				"src/common/utils/functionRateLimiterFactory.ts"
+			],
+			[
+				"functionRe",
+				"src/common/utils/functionRetryFactory.test.ts"
+			],
+			[
+				"functino Re",
+				"src/common/utils/functionRetryFactory.ts"
+			],
+			[
+				"functionRetryFactory",
+				"src/common/utils/functionRetryFactory.ts"
+			],
+			[
+				"getTradeHistory",
+				"src/market-data/infrastructure/providers/bfx/getTradeHistoryFactory.ts"
+			],
+			[
+				"stream history fa",
+				"src/market-data/infrastructure/providers/bfx/tradeHistoryStreamFactory.ts"
+			],
+			[
+				"high/inde",
+				"src/types/highland/index.d.ts"
+			],
+			[
+				"stream from reco",
+				"src/market-data/infrastructure/providers/ws/reconnectingWsAsStream.ts"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 146.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 740.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 381.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
