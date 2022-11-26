@@ -1,14 +1,14 @@
 import {
+  Circuit,
+  DeployArgs,
   Field,
+  method,
+  Permissions,
+  Poseidon,
   SmartContract,
   state,
   State,
-  method,
-  DeployArgs,
-  Permissions,
   UInt32,
-  Poseidon,
-  Circuit,
 } from 'snarkyjs';
 
 export const phases = {
@@ -19,6 +19,7 @@ export const phases = {
   settled: () => UInt32.from(4),
   canceled: () => UInt32.from(5),
 };
+
 /**
  */
 export class FrequentBatchAuction extends SmartContract {
