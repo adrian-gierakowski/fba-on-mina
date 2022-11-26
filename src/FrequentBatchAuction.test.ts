@@ -34,10 +34,10 @@ async function localDeploy(
   const txn = await Mina.transaction(deployerAccount, () => {
     AccountUpdate.fundNewAccount(deployerAccount);
     zkAppInstance.deploy({ zkappKey: zkAppPrivatekey });
-    zkAppInstance.init(partyAAmountSellX, partyAAmountBuyY);
+    zkAppInstance.initState(partyAAmountSellX, partyAAmountBuyY);
     zkAppInstance.sign(zkAppPrivatekey);
   });
-  await txn.send().wait();
+  await txn.send();
 }
 
 const getState = (instance: FrequentBatchAuction) => ({
@@ -114,7 +114,7 @@ describe('FrequentBatchAuction', () => {
       instance.sign(zkAppPrivateKey);
     });
 
-    await txn.send().wait();
+    await txn.send();
 
     return { partyBAmountSellY };
   };
@@ -156,7 +156,7 @@ describe('FrequentBatchAuction', () => {
         instance.sign(zkAppPrivateKey);
       });
 
-      await txn.send().wait();
+      await txn.send();
     };
 
     it('sets orderComitmentB and phase on success, leaving other state unchanged', async () => {

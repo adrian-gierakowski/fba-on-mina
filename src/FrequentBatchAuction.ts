@@ -12,12 +12,12 @@ import {
 } from 'snarkyjs';
 
 export const phases = {
-  committedOrderA: () => UInt32.fromNumber(0),
-  committedOrderB: () => UInt32.fromNumber(1),
-  revealedOrderA: () => UInt32.fromNumber(2),
-  revealedOrderB: () => UInt32.fromNumber(3),
-  settled: () => UInt32.fromNumber(4),
-  canceled: () => UInt32.fromNumber(5),
+  committedOrderA: () => UInt32.from(0),
+  committedOrderB: () => UInt32.from(1),
+  revealedOrderA: () => UInt32.from(2),
+  revealedOrderB: () => UInt32.from(3),
+  settled: () => UInt32.from(4),
+  canceled: () => UInt32.from(5),
 };
 /**
  */
@@ -49,7 +49,7 @@ export class FrequentBatchAuction extends SmartContract {
   // partyAAmountBuyY - specifies the minimum amount of Y they want to get in return
   // TODO: we need a way for party A to deposit and lock sufficient
   // amount of asset X (>= partyAAmountSellX) into the contract.
-  @method init(partyAAmountSellX: UInt32, partyAAmountBuyY: UInt32) {
+  @method initState(partyAAmountSellX: UInt32, partyAAmountBuyY: UInt32) {
     // Amounts of asset X to be exchanged are made public.
     this.partyAAmountSellX.set(partyAAmountSellX);
     this.partyBAmountBuyX.set(partyAAmountSellX);
