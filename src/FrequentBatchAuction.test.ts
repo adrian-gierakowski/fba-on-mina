@@ -50,7 +50,7 @@ const getState = (instance: FrequentBatchAuction) => ({
   partyBAmountSellY: instance.partyBAmountSellY.get(),
 });
 
-describe('FrequentBatchAuction', () => {
+describe.skip('FrequentBatchAuction', () => {
   let deployerAccount: PrivateKey;
   let zkAppAddress: PublicKey;
   let zkAppPrivateKey: PrivateKey;
