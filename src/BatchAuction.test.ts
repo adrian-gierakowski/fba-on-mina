@@ -1,23 +1,24 @@
 import * as R from 'ramda';
 import {
-  commitmentKeyFromPrivateKey,
-  FrequentBatchAuction,
-  Order,
-  phases,
-} from './FrequentBatchAuction2';
-import {
-  isReady,
-  shutdown,
+  AccountUpdate,
   Field,
+  Int64,
+  UInt64,
+  isReady,
+  MerkleMap,
+  MerkleMapWitness,
   Mina,
   PrivateKey,
   PublicKey,
-  AccountUpdate,
-  UInt32,
-  Poseidon,
-  MerkleMap,
-  Int64,
+  shutdown,
 } from 'snarkyjs';
+import {
+  commitmentKeyFromPrivateKey,
+  FrequentBatchAuction,
+  Order,
+  OrdersWithKeys,
+  OrderWithKey,
+} from './BatchAuction';
 
 /*
  * This file specifies how to test the `FrequentBatchAuction` example smart contract. It is safe to delete this file and replace
@@ -49,7 +50,7 @@ const getState = (instance: FrequentBatchAuction) => ({
   committedOrdersRoot: instance.committedOrdersRoot.get(),
 });
 
-describe('FrequentBatchAuction2', () => {
+describe('BatchAuction', () => {
   let deployerAccount: PrivateKey;
   let zkAppAddress: PublicKey;
   let zkAppPrivateKey: PrivateKey;
@@ -80,9 +81,10 @@ describe('FrequentBatchAuction2', () => {
     const commitOrder = (
       committedOrders: MerkleMap,
       order: Order,
-      { key, privateKey }: UserKeys
+      { key, privateKey }: UserKeys,
+      maybeWitness?: MerkleMapWitness
     ) => {
-      const witness = committedOrders.getWitness(key);
+      const witness = maybeWitness ?? committedOrders.getWitness(key);
       return Mina.transaction(deployerAccount, () => {
         instance.commitOrder(privateKey, order, witness);
         instance.sign(zkAppPrivateKey);
@@ -92,19 +94,25 @@ describe('FrequentBatchAuction2', () => {
           // Update committedOrders MerkleMap so that it matches
           // the committedOrdersRoot on the contract
           committedOrders.set(key, order.getCommitment());
+          return { witness };
         });
     };
 
     const revealOrder = (
       committedOrders: MerkleMap,
       order: Order,
-      { key, privateKey }: UserKeys
+      { key, privateKey }: UserKeys,
+      maybeWitness?: MerkleMapWitness
     ) => {
-      const witness = committedOrders.getWitness(key);
+      const witness = maybeWitness ?? committedOrders.getWitness(key);
       return Mina.transaction(deployerAccount, () => {
         instance.revealOrder(privateKey, order, witness);
         instance.sign(zkAppPrivateKey);
-      }).then((txn) => txn.send());
+      })
+        .then((txn) => txn.send())
+        .then(() => {
+          witness;
+        });
     };
 
     return { instance, commitOrder, revealOrder };
@@ -138,8 +146,8 @@ describe('FrequentBatchAuction2', () => {
         await setupWithUsers(1);
 
       const order = new Order({
-        amountA: Int64.from(1),
-        amountB: Int64.from(-2),
+        amountA: Int64.from(-1),
+        price: UInt64.from(2),
       });
 
       await commitOrder(committedOrders, order, userKeys[0]);
@@ -165,8 +173,8 @@ describe('FrequentBatchAuction2', () => {
         await setupWithUsers(1);
 
       const order = new Order({
-        amountA: Int64.from(1),
-        amountB: Int64.from(-2),
+        amountA: Int64.from(-1),
+        price: UInt64.from(2),
       });
 
       await commitOrder(committedOrders, order, userKeys[0]);
@@ -179,40 +187,13 @@ describe('FrequentBatchAuction2', () => {
 
       // Try with different order
       const order2 = new Order({
-        amountA: Int64.from(2),
-        amountB: Int64.from(-3),
+        amountA: Int64.from(-2),
+        price: UInt64.from(3),
       });
 
       await expect(() =>
         commitOrder(committedOrders, order, userKeys[0])
       ).rejects.toThrow('invalid commitmentWitness');
-    });
-
-    it('rejects invalid order', async () => {
-      const { instance, userKeys, committedOrders, commitOrder } =
-        await setupWithUsers(1);
-
-      const order1 = new Order({
-        amountA: Int64.from(1),
-        amountB: Int64.from(1),
-      });
-
-      await expect(() =>
-        commitOrder(committedOrders, order1, userKeys[0])
-      ).rejects.toThrow(
-        'invalid Order: amountA and amountB need to be of opposite sign'
-      );
-
-      const order2 = new Order({
-        amountA: Int64.from(-1),
-        amountB: Int64.from(-2),
-      });
-
-      await expect(() =>
-        commitOrder(committedOrders, order2, userKeys[0])
-      ).rejects.toThrow(
-        'invalid Order: amountA and amountB need to be of opposite sign'
-      );
     });
 
     it('allows commitments from multiple users', async () => {
@@ -221,8 +202,8 @@ describe('FrequentBatchAuction2', () => {
       const emtyCommitmentValue = Field(0);
 
       const order = new Order({
-        amountA: Int64.from(1),
-        amountB: Int64.from(-2),
+        amountA: Int64.from(-1),
+        price: UInt64.from(2),
       });
 
       await commitOrder(committedOrders, order, userKeys[0]);
@@ -236,8 +217,8 @@ describe('FrequentBatchAuction2', () => {
       );
 
       const order2 = new Order({
-        amountA: Int64.from(4),
-        amountB: Int64.from(-1),
+        amountA: Int64.from(-4),
+        price: UInt64.from(1),
       });
       expect(instance.committedOrdersRoot.get()).toEqual(
         committedOrders.getRoot()
@@ -253,8 +234,8 @@ describe('FrequentBatchAuction2', () => {
         await setupWithUsers(1);
 
       const order = new Order({
-        amountA: Int64.from(1),
-        amountB: Int64.from(-2),
+        amountA: Int64.from(-1),
+        price: UInt64.from(2),
       });
 
       await commitOrder(committedOrders, order, userKeys[0]);
@@ -273,20 +254,95 @@ describe('FrequentBatchAuction2', () => {
       });
     });
 
+    it.only('works with orders from multiple users', async () => {
+      const { instance, commitOrder, revealOrder, userKeys, committedOrders } =
+        await setupWithUsers(3);
+
+      const order0 = new Order({
+        amountA: Int64.from(-10),
+        price: UInt64.from(11),
+      });
+      await commitOrder(committedOrders, order0, userKeys[0]);
+
+      const order1 = new Order({
+        amountA: Int64.from(-20),
+        price: UInt64.from(9),
+      });
+      await commitOrder(committedOrders, order1, userKeys[1]);
+
+      const order2 = new Order({
+        amountA: Int64.from(13),
+        price: UInt64.from(10),
+      });
+      await commitOrder(committedOrders, order2, userKeys[2]);
+
+      await revealOrder(committedOrders, order2, userKeys[2]);
+      await revealOrder(committedOrders, order0, userKeys[0]);
+      await revealOrder(committedOrders, order1, userKeys[1]);
+
+      const events = await instance.fetchEvents();
+
+      expect(events).toHaveLength(6);
+
+      expect(events[3]).toEqual({
+        type: 'OrderRevealed',
+        event: new instance.events.OrderRevealed({
+          key: userKeys[2].key,
+          order: order2,
+        }),
+      });
+
+      expect(events[4]).toEqual({
+        type: 'OrderRevealed',
+        event: new instance.events.OrderRevealed({
+          key: userKeys[0].key,
+          order: order0,
+        }),
+      });
+
+      expect(events[5]).toEqual({
+        type: 'OrderRevealed',
+        event: new instance.events.OrderRevealed({
+          key: userKeys[1].key,
+          order: order1,
+        }),
+      });
+
+      await Mina.transaction(deployerAccount, () => {
+        const orders = [
+          { order: order1, key: userKeys[1].key },
+          { order: order2, key: userKeys[2].key },
+          { order: order0, key: userKeys[0].key },
+        ];
+
+        const isBuyOrder = (o: OrderWithKey): boolean =>
+          o.order.amountA.isPositive().toBoolean();
+
+        const buyOrders = orders.filter(isBuyOrder);
+        const sellOrders = orders.filter((o) => !isBuyOrder(o));
+
+        instance.calculateSettlementPrice(
+          new OrdersWithKeys(buyOrders),
+          new OrdersWithKeys(sellOrders)
+        );
+        instance.sign(zkAppPrivateKey);
+      }).then((txn) => txn.send());
+    });
+
     it('rejects transaction of no commitment was made for given key', async () => {
       const { instance, commitOrder, revealOrder, userKeys, committedOrders } =
         await setupWithUsers(1);
 
       const order = new Order({
-        amountA: Int64.from(1),
-        amountB: Int64.from(-2),
+        amountA: Int64.from(-1),
+        price: UInt64.from(2),
       });
 
       await expect(revealOrder(committedOrders, order, userKeys[0]))
         // TODO: can we have a nice message here?
-        .rejects.toThrow()
+        .rejects.toThrow();
 
-      expect(await instance.fetchEvents()).toHaveLength(0)
+      expect(await instance.fetchEvents()).toHaveLength(0);
     });
 
     it('rejects transaction if order does not match initial commitment', async () => {
@@ -294,22 +350,22 @@ describe('FrequentBatchAuction2', () => {
         await setupWithUsers(1);
 
       const committedOrder = new Order({
-        amountA: Int64.from(1),
-        amountB: Int64.from(-2),
+        amountA: Int64.from(-1),
+        price: UInt64.from(2),
       });
 
       await commitOrder(committedOrders, committedOrder, userKeys[0]);
 
       const revealedOrder = new Order({
-        amountA: Int64.from(2),
-        amountB: Int64.from(-2),
+        amountA: Int64.from(-2),
+        price: UInt64.from(2),
       });
 
       await expect(revealOrder(committedOrders, revealedOrder, userKeys[0]))
         // TODO: can we have a nice message here?
-        .rejects.toThrow()
+        .rejects.toThrow();
 
-      expect(await instance.fetchEvents()).toHaveLength(1)
+      expect(await instance.fetchEvents()).toHaveLength(1);
     });
   });
 });
