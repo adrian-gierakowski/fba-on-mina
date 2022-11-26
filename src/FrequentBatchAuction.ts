@@ -74,7 +74,9 @@ export class FrequentBatchAuction extends SmartContract {
   // TODO: at this point we need to ensure that party B has
   // sufficient balance of asset Y locked in the contract (>= partyBAmountSellY).
   @method commitOrderB(partyBAmountSellY: UInt32) {
-    this.phase.assertEquals(phases.committedOrderA());
+    const phase = this.phase.get();
+    this.phase.assertEquals(phase);
+    phase.assertEquals(phases.committedOrderA());
 
     this.orderComitmentB.set(Poseidon.hash(partyBAmountSellY.toFields()));
 
@@ -86,7 +88,9 @@ export class FrequentBatchAuction extends SmartContract {
   // partyAAmountBuyY is secret so it needs to be revealed before orders
   // can be settled
   @method revealOrderA(partyAAmountBuyY: UInt32) {
-    this.phase.assertEquals(phases.committedOrderB());
+    const phase = this.phase.get();
+    this.phase.assertEquals(phase);
+    phase.assertEquals(phases.committedOrderB());
 
     const orderComitmentFromArgs = Poseidon.hash(partyAAmountBuyY.toFields());
 

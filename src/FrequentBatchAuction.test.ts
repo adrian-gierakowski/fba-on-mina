@@ -141,7 +141,7 @@ describe('FrequentBatchAuction', () => {
       await makeAndSendCommitOrderBTx(instance);
 
       await expect(() => makeAndSendCommitOrderBTx(instance)).rejects.toThrow(
-        'Account_app_state_precondition_unsatisfied'
+        'assert_equal: 1 != 0'
       );
     });
   });
@@ -159,7 +159,7 @@ describe('FrequentBatchAuction', () => {
       await txn.send();
     };
 
-    it('sets orderComitmentB and phase on success, leaving other state unchanged', async () => {
+    it('sets partyAAmountBuyY and phase on success, leaving other state unchanged', async () => {
       const { instance, partyAAmountBuyY } = await setup();
 
       await makeAndSendCommitOrderBTx(instance);
@@ -176,12 +176,32 @@ describe('FrequentBatchAuction', () => {
       expect(stateAfter).toEqual(expectedState);
     });
 
-    it('fails if called in the wrong phase', async () => {
+    it('fails if called in the wrong phase (0)', async () => {
       const { instance, partyAAmountBuyY } = await setup();
 
       await expect(() =>
         makeAndSendTx(instance, partyAAmountBuyY)
-      ).rejects.toThrow('Account_app_state_precondition_unsatisfied');
+      ).rejects.toThrow('assert_equal: 0 != 1');
+    });
+
+    it('fails if called in the wrong phase (1)', async () => {
+      const { instance, partyAAmountBuyY } = await setup();
+
+      await makeAndSendCommitOrderBTx(instance);
+
+      const stateBefore = getState(instance);
+      await makeAndSendTx(instance, partyAAmountBuyY);
+      const stateAfter = getState(instance);
+
+      const expectedState = {
+        ...stateBefore,
+        phase: phases.revealedOrderA(),
+        partyAAmountBuyY,
+      };
+
+      await expect(() =>
+        makeAndSendTx(instance, partyAAmountBuyY)
+      ).rejects.toThrow('assert_equal: 2 != 1');
     });
   });
 });
