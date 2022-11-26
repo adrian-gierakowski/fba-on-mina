@@ -96,7 +96,7 @@ describe('FrequentBatchAuction', () => {
     const { instance, partyAAmountSellX, partyAAmountBuyY } = await setup();
     const orderComitmentA = Poseidon.hash(partyAAmountBuyY.toFields());
 
-    expect(instance.phase.get()).toEqual(UInt32.zero);
+    expect(instance.phase.get()).toEqual(phases.committedOrderA());
     expect(instance.orderComitmentA.get()).toEqual(orderComitmentA);
     expect(instance.orderComitmentB.get()).toEqual(Field.zero);
     expect(instance.partyAAmountSellX.get()).toEqual(partyAAmountSellX);
@@ -141,7 +141,7 @@ describe('FrequentBatchAuction', () => {
       await makeAndSendCommitOrderBTx(instance);
 
       await expect(() => makeAndSendCommitOrderBTx(instance)).rejects.toThrow(
-        'assert_equal: 1 != 0'
+        `assert_equal: ${phases.committedOrderB()} != ${phases.committedOrderA()}`
       );
     });
   });
@@ -181,7 +181,9 @@ describe('FrequentBatchAuction', () => {
 
       await expect(() =>
         makeAndSendTx(instance, partyAAmountBuyY)
-      ).rejects.toThrow('assert_equal: 0 != 1');
+      ).rejects.toThrow(
+        `assert_equal: ${phases.committedOrderA()} != ${phases.committedOrderB()}`
+      );
     });
 
     it('fails if called in the wrong phase (1)', async () => {
@@ -201,7 +203,9 @@ describe('FrequentBatchAuction', () => {
 
       await expect(() =>
         makeAndSendTx(instance, partyAAmountBuyY)
-      ).rejects.toThrow('assert_equal: 2 != 1');
+      ).rejects.toThrow(
+        `assert_equal: ${phases.revealedOrderA()} != ${phases.committedOrderB()}`
+      );
     });
   });
 });

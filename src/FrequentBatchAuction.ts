@@ -12,12 +12,13 @@ import {
 } from 'snarkyjs';
 
 export const phases = {
-  committedOrderA: () => UInt32.from(0),
-  committedOrderB: () => UInt32.from(1),
-  revealedOrderA: () => UInt32.from(2),
-  revealedOrderB: () => UInt32.from(3),
-  settled: () => UInt32.from(4),
-  canceled: () => UInt32.from(5),
+  uninitialised: () => UInt32.from(0),
+  committedOrderA: () => UInt32.from(1),
+  committedOrderB: () => UInt32.from(2),
+  revealedOrderA: () => UInt32.from(3),
+  revealedOrderB: () => UInt32.from(4),
+  settled: () => UInt32.from(5),
+  canceled: () => UInt32.from(6),
 };
 
 /**
@@ -43,6 +44,7 @@ export class FrequentBatchAuction extends SmartContract {
       ...Permissions.default(),
       editState: Permissions.proofOrSignature(),
     });
+    this.phase.set(phases.uninitialised());
   }
 
   // Party A initialises the contract with a sell order, where:
@@ -51,6 +53,13 @@ export class FrequentBatchAuction extends SmartContract {
   // TODO: we need a way for party A to deposit and lock sufficient
   // amount of asset X (>= partyAAmountSellX) into the contract.
   @method initState(partyAAmountSellX: UInt32, partyAAmountBuyY: UInt32) {
+    // Throws an error if called before during deploy.
+    // How to prevent from being called again once deployed?
+
+    // const phase = this.phase.get();
+    // this.phase.assertEquals(phase);
+    // phase.assertEquals(phases.uninitialised());
+
     // Amounts of asset X to be exchanged are made public.
     this.partyAAmountSellX.set(partyAAmountSellX);
     this.partyBAmountBuyX.set(partyAAmountSellX);
