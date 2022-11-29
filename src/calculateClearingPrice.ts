@@ -1,7 +1,49 @@
+// Adapted from: https://github.com/MEVProof/Contracts/blob/40ae7b29979ebfcdcda93de36df807e7b317bb0e/test/Utils.js#L190-L304
+import * as R from 'ramda';
+import FP from 'lodash/fp';
+import { Ord } from 'ramda';
+
 export type Order = Readonly<{
   price: number;
   size: number;
 }>;
+
+type VolumesByPrice = Record<string, number>;
+
+const ordersToVolumesByPricePoint = (
+  orders: ReadonlyArray<Order>
+): VolumesByPrice =>
+  R.pipe(FP.groupBy('price'), FP.mapValues(FP.sumBy('size')))(orders);
+
+const cumulativeVolumesByPrice = (
+  allPrices: ReadonlyArray<number>,
+  orders: ReadonlyArray<Order>
+): VolumesByPrice => {
+  const volumesFromOrdersByPrice = ordersToVolumesByPricePoint(orders);
+  const prices = R.scan(
+    (acc: [number, number], price) => {
+      const cummulativeVolume = acc[1];
+      const volumeAtPrice = volumesFromOrdersByPrice[price.toString()] ?? 0;
+      return [price, volumeAtPrice + cummulativeVolume] as const;
+    },
+    [0, 0],
+    allPrices
+  );
+
+  return R.fromPairs(prices);
+};
+
+const sumVolumesFromOrdersWithPricePredicate =
+  (pred: (price: number) => boolean) => (orders: ReadonlyArray<Order>) =>
+    FP.sumBy(
+      'size',
+      R.filter((o) => pred(o.price), orders)
+    ) ?? 0;
+
+const clearingVolumeAtPrice =
+  (buyVolumes: VolumesByPrice, sellVolumes: VolumesByPrice) =>
+  (price: number) =>
+    Math.min(buyVolumes[price] ?? 0, (sellVolumes[price] ?? 0) * price);
 
 export const calculateClearingPrice = (
   buyOrders: ReadonlyArray<Order>,
@@ -11,89 +53,75 @@ export const calculateClearingPrice = (
   const numBuys = buyOrders.length;
   const numSells = sellOrders.length;
 
-  let prices = [];
+  const allOrders = FP.concat(buyOrders, sellOrders);
 
-  for (let step = 0; step < numBuys; step++) {
-    if (prices.indexOf(buyOrders[step].price) === -1) {
-      prices.push(buyOrders[step].price);
-    }
-  }
+  const prices = R.pipe(
+    R.map((x: Order) => x.price),
+    R.uniq,
+    R.sortBy(R.identity)
+  )(allOrders);
 
-  for (let step = 0; step < numSells; step++) {
-    if (prices.indexOf(sellOrders[step].price) === -1) {
-      prices.push(sellOrders[step].price);
-    }
-  }
+  console.log('prices', prices);
 
-  // console.log('check1:', _prices);
-  prices = prices.sort(function (a, b) {
-    return a - b;
-  });
-  // console.log('check2:', _prices);
+  const buyVolumes = cumulativeVolumesByPrice(R.reverse(prices), buyOrders);
+  const sellVolumes = cumulativeVolumesByPrice(prices, sellOrders);
 
-  const numPricePoints = prices.length;
-  const buyVolumes: number[] = [];
-  const sellVolumes: number[] = [];
-  const imbalances: number[] = [];
+  // console.log(
+  //   'buyVolumes',
+  //   FP.sortBy(
+  //     0,
+  //     R.map(([p, v]) => [parseFloat(p), v], R.toPairs(buyVolumes))
+  //   )
+  // );
+  // console.log(
+  //   'sellVolumes',
+  //   FP.sortBy(
+  //     0,
+  //     R.map(([p, v]) => [parseFloat(p), v], R.toPairs(sellVolumes))
+  //   )
+  // );
 
-  for (let step = 0; step < numBuys; step++) {
-    buyVolumes[buyOrders[step].price] =
-      (buyVolumes[buyOrders[step].price] || 0) + buyOrders[step].size;
-  }
-  for (let step = 0; step < numSells; step++) {
-    sellVolumes[sellOrders[step].price] =
-      (sellVolumes[sellOrders[step].price] || 0) + sellOrders[step].size;
-  }
-  // console.log('check3.1:', _buyVolumes);
-  // console.log('check3.2:', _sellVolumes);
-  for (let step = 0; step < numPricePoints - 1; step++) {
-    buyVolumes[prices[numPricePoints - 2 - step]] =
-      (buyVolumes[prices[numPricePoints - 2 - step]] || 0) +
-      (buyVolumes[prices[numPricePoints - 1 - step]] || 0);
-    sellVolumes[prices[1 + step]] =
-      (sellVolumes[prices[1 + step]] || 0) + (sellVolumes[prices[step]] || 0);
-  }
+  const getClearingVolume = clearingVolumeAtPrice(buyVolumes, sellVolumes);
 
-  const _clearingVolumes = [];
-  for (let step = 0; step < numPricePoints; step++) {
-    _clearingVolumes[prices[step]] = Math.min(
-      buyVolumes[prices[step]] || 0,
-      (sellVolumes[prices[step]] || 0) * prices[step]
-    );
-  }
-  // console.log('check4:', _clearingVolumes);
-  let maxVolume = 0;
-  let clearingPrice = -1;
-  for (let step = 0; step < numPricePoints; step++) {
-    if (_clearingVolumes[prices[step]] > maxVolume) {
-      maxVolume = _clearingVolumes[prices[step]];
-      clearingPrice = prices[step];
-    }
-  }
-  // console.log('check4.1:', _maxVolume);
-  for (let step = 0; step < numPricePoints; step++) {
-    imbalances[prices[step]] =
-      buyVolumes[prices[step]] - sellVolumes[prices[step]] * prices[step];
-  }
+  let [clearingPrice, maxVolume] = R.reduce(
+    (acc: [number, number], price: number) => {
+      const volumeAtPreviousPrice = acc[1];
+      const volumeAtPrice = getClearingVolume(price);
+      return volumeAtPrice > volumeAtPreviousPrice
+        ? [price, volumeAtPrice]
+        : acc;
+    },
+    [-1, 0],
+    prices
+  );
 
-  // console.log('check4.2:', _clearingVolumes.indexOf(_maxVolume));
+  const imbalances = R.fromPairs(
+    R.map(
+      (price) => [price, buyVolumes[price] - sellVolumes[price] * price],
+      prices
+    )
+  );
+
+  console.log('imbalances', imbalances);
+
   let imbalanceAtClearingPrice = imbalances[clearingPrice];
-  // console.log('check5:', _clearingPrice, _imbalance);
+
   let buyVolumeFinal = 0;
   let sellVolumeFinal = 0;
 
-  if (imbalanceAtClearingPrice > 0) {
-    for (let step = 0; step < numBuys; step++) {
-      if (buyOrders[step].price > clearingPrice) {
-        buyVolumeFinal += buyOrders[step].size;
-      }
-    }
+  const buyOrdersAboveClearingPrice = R.filter(
+    (o) => o.price > clearingPrice,
+    buyOrders
+  );
 
-    for (let step = 0; step < numSells; step++) {
-      if (sellOrders[step].price <= clearingPrice) {
-        sellVolumeFinal += sellOrders[step].size;
-      }
-    }
+  if (imbalanceAtClearingPrice > 0) {
+    buyVolumeFinal += sumVolumesFromOrdersWithPricePredicate(
+      (price) => price > clearingPrice
+    )(buyOrders);
+
+    sellVolumeFinal += sumVolumesFromOrdersWithPricePredicate(
+      (price) => price <= clearingPrice
+    )(sellOrders);
 
     const upperbound = prices[prices.indexOf(clearingPrice) + 1];
     let newImbalance =
@@ -114,17 +142,13 @@ export const calculateClearingPrice = (
         buyVolumeFinal - sellVolumeFinal * (clearingPrice + minTickSize);
     }
   } else {
-    for (let step = 0; step < numBuys; step++) {
-      if (buyOrders[step].price >= clearingPrice) {
-        buyVolumeFinal += buyOrders[step].size;
-      }
-    }
+    buyVolumeFinal += sumVolumesFromOrdersWithPricePredicate(
+      (price) => price >= clearingPrice
+    )(buyOrders);
 
-    for (let step = 0; step < numSells; step++) {
-      if (sellOrders[step].price < clearingPrice) {
-        sellVolumeFinal += sellOrders[step].size;
-      }
-    }
+    sellVolumeFinal += sumVolumesFromOrdersWithPricePredicate(
+      (price) => price < clearingPrice
+    )(sellOrders);
 
     const lowerbound = prices[prices.indexOf(clearingPrice) - 1];
     let newImbalance =

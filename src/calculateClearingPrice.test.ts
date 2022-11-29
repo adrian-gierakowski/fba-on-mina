@@ -100,10 +100,6 @@ describe('priceAlgo', () => {
       R.map(R.map(amountsToOrder)),
       R.partition(({ amountA }) => amountA > 0)
     )(orders)
-    // const buyOrders: ReadonlyArray<Order> = [];
-
-    // const sellOrders: ReadonlyArray<Order> = [
-    // ];
 
     console.log('buyOrders', buyOrders)
     console.log('sellOrders', sellOrders)
@@ -116,6 +112,36 @@ describe('priceAlgo', () => {
       clearingPrice: 0.8695652173913043,
       volumeSettled: 21,
       imbalance: -19.869565217391305
+    })
+  });
+
+  it('3', async () => {
+    const buyOrders: ReadonlyArray<Order> = [
+      {
+        price: 10,
+        size: 13,
+      },
+    ];
+
+    const sellOrders: ReadonlyArray<Order> = [
+      {
+        price: 11,
+        size: 10,
+      },
+      {
+        price: 9,
+        size: 20,
+      },
+    ];
+
+    const minTickSize = 0.01
+    const result = calculateClearingPrice(buyOrders, sellOrders, minTickSize)
+
+    console.log('result', result)
+    expect(result).toEqual({
+      clearingPrice: 9,
+      volumeSettled: 13,
+      imbalance: -167
     })
   });
 });
