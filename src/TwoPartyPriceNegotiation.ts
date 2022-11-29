@@ -23,7 +23,7 @@ export const phases = {
 
 /**
  */
-export class FrequentBatchAuction extends SmartContract {
+export class TwoPartyPriceNegotiation extends SmartContract {
   @state(UInt32) phase = State<UInt32>();
   @state(Field) orderComitmentA = State<Field>();
   @state(Field) orderComitmentB = State<Field>();

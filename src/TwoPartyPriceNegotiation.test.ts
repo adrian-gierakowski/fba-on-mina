@@ -1,4 +1,4 @@
-import { FrequentBatchAuction, phases } from './FrequentBatchAuction';
+import { TwoPartyPriceNegotiation, phases } from './TwoPartyPriceNegotiation';
 import {
   isReady,
   shutdown,
@@ -12,7 +12,7 @@ import {
 } from 'snarkyjs';
 
 /*
- * This file specifies how to test the `FrequentBatchAuction` example smart contract. It is safe to delete this file and replace
+ * This file specifies how to test the `TwoPartyPriceNegotiation` example smart contract. It is safe to delete this file and replace
  * with your own tests.
  *
  * See https://docs.minaprotocol.com/zkapps for more info.
@@ -25,7 +25,7 @@ function createLocalBlockchain() {
 }
 
 async function localDeploy(
-  zkAppInstance: FrequentBatchAuction,
+  zkAppInstance: TwoPartyPriceNegotiation,
   zkAppPrivatekey: PrivateKey,
   deployerAccount: PrivateKey,
   partyAAmountSellX: UInt32,
@@ -40,7 +40,7 @@ async function localDeploy(
   await txn.send();
 }
 
-const getState = (instance: FrequentBatchAuction) => ({
+const getState = (instance: TwoPartyPriceNegotiation) => ({
   phase: instance.phase.get(),
   orderComitmentA: instance.orderComitmentA.get(),
   orderComitmentB: instance.orderComitmentB.get(),
@@ -50,7 +50,7 @@ const getState = (instance: FrequentBatchAuction) => ({
   partyBAmountSellY: instance.partyBAmountSellY.get(),
 });
 
-describe.skip('FrequentBatchAuction', () => {
+describe('TwoPartyPriceNegotiation', () => {
   let deployerAccount: PrivateKey;
   let zkAppAddress: PublicKey;
   let zkAppPrivateKey: PrivateKey;
@@ -76,11 +76,11 @@ describe.skip('FrequentBatchAuction', () => {
     partyAAmountSellX?: UInt32;
     partyAAmountBuyY?: UInt32;
   } = {}): Promise<{
-    instance: FrequentBatchAuction;
+    instance: TwoPartyPriceNegotiation;
     partyAAmountSellX: UInt32;
     partyAAmountBuyY: UInt32;
   }> => {
-    const instance = new FrequentBatchAuction(zkAppAddress);
+    const instance = new TwoPartyPriceNegotiation(zkAppAddress);
     await localDeploy(
       instance,
       zkAppPrivateKey,
@@ -92,7 +92,7 @@ describe.skip('FrequentBatchAuction', () => {
     return { instance, partyAAmountSellX, partyAAmountBuyY };
   };
 
-  it('generates and deploys the `FrequentBatchAuction` smart contract', async () => {
+  it('generates and deploys the `TwoPartyPriceNegotiation` smart contract', async () => {
     const { instance, partyAAmountSellX, partyAAmountBuyY } = await setup();
     const orderComitmentA = Poseidon.hash(partyAAmountBuyY.toFields());
 
@@ -106,7 +106,7 @@ describe.skip('FrequentBatchAuction', () => {
   });
 
   const makeAndSendCommitOrderBTx = async (
-    instance: FrequentBatchAuction,
+    instance: TwoPartyPriceNegotiation,
     partyBAmountSellY = UInt32.from(4)
   ) => {
     const txn = await Mina.transaction(deployerAccount, () => {
@@ -148,7 +148,7 @@ describe.skip('FrequentBatchAuction', () => {
 
   describe('revealOrderA', () => {
     const makeAndSendTx = async (
-      instance: FrequentBatchAuction,
+      instance: TwoPartyPriceNegotiation,
       partyAAmountBuyY: UInt32
     ) => {
       const txn = await Mina.transaction(deployerAccount, () => {

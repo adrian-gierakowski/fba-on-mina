@@ -1,3 +1,2 @@
-import { FrequentBatchAuction } from './FrequentBatchAuction';
+export * from './TwoPartyPriceNegotiation';
 
-export { FrequentBatchAuction as Add };
