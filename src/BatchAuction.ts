@@ -190,61 +190,27 @@ export class FrequentBatchAuction extends SmartContract {
     buyOrders.orders.forEach((o) => assertIsBuyOrder(new Order(o.order)));
     sellOrders.orders.forEach((o) => assertIsSellOrder(new Order(o.order)));
 
-    // const orders = sortedOrdersWithKeys
-    //   .orders
-    //   .map(orderWithKey => orderWithKey.order)
+    const sortedOrders = allOrder.sort((a, b) => {
+      const pricesEqual = a.order.price.equals(b.order.price)
 
-    // // Verify that orders are sorted.
-    // const minPrice = UInt64.from(0)
-    // orders.reduce(
-    //   (prevPrice, order) => {
-    //     // console.log('price', price.toString())
-    //     order.price.assertGte(prevPrice)
-    //     return order.price
-    //   },
-    //   minPrice
-    // )
+      if (Bool(pricesEqual).toBoolean()) return 0
+      const aIsGreater = a.order.price.gt(b.order.price)
+      return Bool(aIsGreater).toBoolean()
+        ? 1
+        : -1
+    })
 
-    // const buyOrders = orders.reduce(
-    //   (orders: Order[], order) => {
-    //     const maybeOorder = Circuit.if(
-    //       order.amountA.isPositive(),
-    //       [new Order(order)],
-    //       [],
-    //     )
-    //     return orders.concat(maybeOorder)
-    //   },
-    //   []
-    // )
+    console.log('sorted prices', sortedOrders.map(o => o.order.price.toString()))
 
-    // const sellOrders = orders.reduce(
-    //   (orders: Order[], order) => {
-    //     const maybeOorder = Circuit.if(
-    //       order.amountA.isPositive(),
-    //       [],
-    //       [new Order(order)],
-    //     )
-    //     return orders.concat(maybeOorder)
-    //   },
-    //   []
-    // )
-
-    // console.log('buyOrders', buyOrders)
-    // console.log('sellOrders', sellOrders)
-
-    // const order1 = orders.orders[0].order
-    // const order2 = orders.orders[1].order
-
-    // const amountAToSettle = Circuit.if()
-
-    // order1.amountA.add(amount).
-
-    // this.emitEvent(
-    //   'OrderRevealed',
-    //   new this.events.OrderRevealed({
-    //     key,
-    //     order,
-    //   })
-    // );
+    // Verify that orders are sorted.
+    const minPrice = UInt64.from(0)
+    sortedOrders.reduce(
+      (prevPrice, order) => {
+        // console.log('price', price.toString())
+        order.order.price.assertGte(prevPrice)
+        return order.order.price
+      },
+      minPrice
+    )
   }
 }
