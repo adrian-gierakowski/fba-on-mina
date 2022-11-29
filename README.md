@@ -4,9 +4,9 @@ This template uses TypeScript.
 
 # References
 
-https://academic.oup.com/qje/article/130/4/1547/1916146
-https://eprint.iacr.org/2022/155.pdf
-https://github.com/MEVProof/Contracts
+- https://academic.oup.com/qje/article/130/4/1547/1916146
+- https://eprint.iacr.org/2022/155.pdf
+- https://github.com/MEVProof/Contracts
 
 ## How to build
 
